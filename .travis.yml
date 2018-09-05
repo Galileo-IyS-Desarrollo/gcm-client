@@ -1,10 +1,11 @@
-language: node_js
+language: node_js 
 node_js:
-  - "node"
-
-install:
-  - npx create-react-app my-app
-  - cd my-app
-  - npm start
+  - "stable"
   
-script: 'true'
+cache:
+  directories:
+  - node_modules
+
+script:
+  - npm test
+  - npm run build
